@@ -1,6 +1,8 @@
 {
   "manifestVersion": "2.2",
-  "contracts": {},
+  "contracts": {
+    "ERC721": "ERC721"
+  },
   "dependencies": {},
   "name": "ERC721",
   "version": "1.0.0",

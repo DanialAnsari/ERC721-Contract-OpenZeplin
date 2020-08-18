@@ -3,8 +3,9 @@ pragma solidity ^0.6.2;
 import "./IERC721.sol";
 import "./Address.sol";
 import "./IERC721Reciever.sol";
+import "@openzeppelin/upgrades/contracts/Initializable.sol";
 
-contract ERC721 is IERC721 {
+contract ERC721 is IERC721,Initializable {
     using Address for address;
 
     mapping(uint256 => address) private _token_owner;
@@ -16,11 +17,11 @@ contract ERC721 is IERC721 {
     mapping(uint256 => address) private approved;
 
     mapping(address => mapping(address => bool)) private allApproved;
-    bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
+    bytes4 private _ERC721_RECEIVED;
 
     string _name;
     string _symbol;
-    uint256 token_count = 0;
+    uint256 token_count;
 
     event Transfer(
         address indexed from,
@@ -37,6 +38,11 @@ contract ERC721 is IERC721 {
         address indexed operator,
         bool approved
     );
+
+function initialize() public initializer {
+        token_count = 0;
+         _ERC721_RECEIVED = 0x150b7a02;
+    }
 
     function mint(string memory name) public returns (uint256) {
         _token_owner[token_count] = msg.sender;
