@@ -1,0 +1,31 @@
+{
+  "contracts": {},
+  "solidityLibs": {},
+  "proxies": {
+    "ERC721/A": [
+      {
+        "address": "0xd809ED2608B4f70F2c98F1c5dEC989b95Bd3D7B6",
+        "kind": "NonProxy",
+        "bytecodeHash": "7d9d998bd3b7e7c1a74f25707beb5a5c92a5252ee278216ce09460ca58124a88"
+      },
+      {
+        "address": "0x7FF0B3e225258EeB6501c3c9558F4A57aA0CC23D",
+        "kind": "NonProxy",
+        "bytecodeHash": "7d9d998bd3b7e7c1a74f25707beb5a5c92a5252ee278216ce09460ca58124a88"
+      }
+    ],
+    "ERC721/B": [
+      {
+        "address": "0xc3a9C020310a46a8a623CbeC0193D21e3Fe2dF07",
+        "kind": "NonProxy",
+        "bytecodeHash": "6c15a2fe849aeca50e2930f9c176519a0614b27f0bf5bddba46b9c1de32ddfb3"
+      },
+      {
+        "address": "0x8650fd5A13E04e8c7F5138F20278CE3C6b5CA90c",
+        "kind": "NonProxy",
+        "bytecodeHash": "b3ec2f57e108335c894a923d05d1643f6bae50dc5dff1ed7241f9d4d01ae41bc"
+      }
+    ]
+  },
+  "manifestVersion": "2.2"
+}

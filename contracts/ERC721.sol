@@ -58,7 +58,7 @@ function initialize() public initializer {
         uint256 tokenId
     ) external override {
         require(
-            Address.isContract(to),
+            !Address.isContract(to),
             "Address cannot be send to a contract address"
         );
         require(from != address(0), "Cannot sent to zero address");
